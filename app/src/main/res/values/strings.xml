@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">InterViewQuestion</string>
+    <string name="Android">Android</string>
+    <string name="java">Java</string>
 </resources>
