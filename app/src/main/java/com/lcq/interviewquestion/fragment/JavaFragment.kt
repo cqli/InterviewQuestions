@@ -79,13 +79,24 @@ class JavaFragment : BaseFragment() {
                 "3.系统开发中C/S结构（Client/Server）中Client（客户端）往往可以由 B/S结构（Browser/Server结构）的Browser（浏览器）及其载体承担，C/S结构的Web应用与B/S结构（Browser/Server结构）具有紧密联系。大系统和复杂系统中，C/S结构和B/S结构的嵌套也很普遍。\n" +
                 "\n" +
                 "4.原来的Client/Server结构转变成Browser/Server结构后，客户机的压力大大减轻，负荷被均衡地分配给了服务器。由于这种结构不再需要专用的客户端软件，因此也使技术维护人员从繁重的安装、配置和升级等维护工作中解脱了出来，可以把主要精力放在服务器程序的更新工作上。同时，使用Web浏览器作为客户端软件，界面友好，新开发的系统也不需要用户每次都从头学习。而且，这种三层模式，层与层之间相互独立，任何一层的改变都不影响其他层原有的功能，所以可用不同厂家的产品组成性能更佳的系统。总之，三层模式的Browser/Server结构从根本上弥补了传统的二层模式的Client/Server结构的缺陷，是应用系统体系结构中一次深刻的变革。"
-        titleList.add(ListResult("什么是B/S架构？什么是C/S架构", content))
+        titleList.add(ListResult("<a href=\"https://www.cnblogs.com/misswangxing/p/7852716.html\">什么是B/S架构？什么是C/S架构</a> ", content))
+        val content1 = "" +
+                "HTTP：超文本传输协议\n" +
+                "FTP：文件传输协议\n" +
+                "SMPT：简单邮件协议\n" +
+                "TELNET：远程终端协议\n" +
+                "POP3：邮件读取协议"
+        titleList.add(ListResult("<a href=\"https://www.cnblogs.com/unrulywind/p/9093031.html\">java常用的网络协议</a>", content1))
+        val content3 = "JAVA SE：主要用在客户端开发\n" +
+                "JAVA EE：主要用在web应用程序开发\n" +
+                "JAVA ME：主要用在嵌入式应用程序开发"
 
-        titleList.add(ListResult("Java都有那些开发平台", content))
-
-        titleList.add(ListResult("什么是JVM？java虚拟机包括什么", content))
+        titleList.add(ListResult("Java都有那些开发平台", content3))
+        val content4 = "JVM：java虚拟机，运用硬件或软件手段实现的虚拟的计算机，Java虚拟机包括：寄存器，堆栈，处理器"
+        titleList.add(ListResult("<a href=\"https://www.cnblogs.com/yixianyixian/p/7680321.html\">什么是JVM？java虚拟机包括什么</a>", content4))
 
         titleList.add(ListResult("Java是否需要开发人员回收内存垃圾吗", content))
+
         titleList.add(ListResult("什么是JDK？什么是JRE", content))
 
         titleList.add(ListResult("什么是数据结构", content))

@@ -1,8 +1,18 @@
 package com.lcq.interviewquestion.adapter
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.net.Uri
+import android.provider.Browser
 import android.support.v7.widget.RecyclerView
+import android.text.Html
+import android.text.SpannableStringBuilder
+import android.text.TextPaint
+import android.text.style.ClickableSpan
+import android.text.style.URLSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +20,8 @@ import android.widget.TextView
 import com.lcq.interviewquestion.R
 import com.lcq.interviewquestion.activity.ContentDetailActivity
 import com.lcq.interviewquestion.result.ListResult
+import com.lcq.interviewquestion.utils.TextHtmlUtils
+import kotlinx.android.synthetic.main.activity_content_detail.*
 
 class GeneralAdapter(//当前上下文对象
         internal var context: Context, //RecyclerView填充Item数据的List对象
@@ -26,6 +38,7 @@ class GeneralAdapter(//当前上下文对象
     //绑定数据
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.textView.text = datas[position].title
+        holder.textView.text = TextHtmlUtils.getClickableHtml(datas[position].title);//解析html
         holder.textView.setOnClickListener {
             val intent = Intent(context, ContentDetailActivity::class.java)
             intent.putExtra("result", datas[position])
@@ -52,4 +65,6 @@ class GeneralAdapter(//当前上下文对象
     fun getDataList(): List<ListResult> {
         return datas
     }
+
+
 }
