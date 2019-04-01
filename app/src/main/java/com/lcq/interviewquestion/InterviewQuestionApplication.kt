@@ -2,6 +2,8 @@ package com.lcq.interviewquestion
 
 import android.app.Application
 import android.content.Context
+import com.apkfuns.logutils.LogLevel
+import com.apkfuns.logutils.LogUtils
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter
 import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.api.RefreshFooter
@@ -41,5 +43,11 @@ class InterviewQuestionApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         mAppContext = applicationContext
+        LogUtils.getLogConfig()
+                .configAllowLog(true)
+                .configTagPrefix("InterviewQuestion")
+                .configLevel(LogLevel.TYPE_ERROR)
+                .configShowBorders(true)
+                .configFormatTag("%d{HH:mm:ss:SSS} %t %c{-5}")
     }
 }

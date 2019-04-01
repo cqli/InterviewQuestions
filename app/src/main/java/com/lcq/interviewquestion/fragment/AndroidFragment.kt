@@ -35,21 +35,34 @@ class AndroidFragment : BaseFragment() {
 
         titleList.add(ListResult("java中==和equals和hashCode的区别 ", content))
 
-        titleList.add(ListResult("int与integer的区别 ", content))
+        titleList.add(ListResult("int与integer的区别 ", "int 基本类型 \n" +
+                "integer 对象 int的封装类"))
 
-        titleList.add(ListResult("String、StringBuffer、StringBuilder区别", content))
+        titleList.add(ListResult("String、StringBuffer、StringBuilder区别", "String:字符串常量 不适用于经常要改变值得情况，每次改变相当于生成一个新的对象\n" +
+                "StringBuffer:字符串变量 （线程安全）\n" +
+                "StringBuilder:字符串变量（线程不安全） 确保单线程下可用，效率略高于StringBuffer"))
 
-        titleList.add(ListResult("什么是内部类？内部类的作用 ", content))
+        titleList.add(ListResult("什么是内部类？内部类的作用 ", "内部类可直接访问外部类的属性\n" +
+                "Java中内部类主要分为成员内部类、局部内部类(嵌套在方法和作用域内)、匿名内部类（没构造方法）、静态内部类（static修饰的类，不能使用任何外围类的非static成员变量和方法， 不依赖外围类）"))
 
-        titleList.add(ListResult("进程和线程的区别 ", content))
+        titleList.add(ListResult("进程和线程的区别 ", "进程是cpu资源分配的最小单位，线程是cpu调度的最小单位。\n" +
+                "进程之间不能共享资源，而线程共享所在进程的地址空间和其它资源。\n" +
+                "一个进程内可拥有多个线程，进程可开启进程，也可开启线程。\n" +
+                "一个线程只能属于一个进程，线程可直接使用同进程的资源,线程依赖于进程而存在。"))
 
-        titleList.add(ListResult("final，finally，finalize的区别", content))
+        titleList.add(ListResult("final，finally，finalize的区别", "final:修饰类、成员变量和成员方法，类不可被继承，成员变量不可变，成员方法不可重写\n" +
+                "finally:与try...catch...共同使用，确保无论是否出现异常都能被调用到\n" +
+                "finalize:类的方法,垃圾回收之前会调用此方法,子类可以重写finalize()方法实现对资源的回收"))
 
-        titleList.add(ListResult("Serializable 和Parcelable 的区别 ", content))
+        titleList.add(ListResult("Serializable 和Parcelable 的区别 ", "Serializable Java 序列化接口 在硬盘上读写 读写过程中有大量临时变量的生成，内部执行大量的i/o操作，效率很低。\n" +
+                "Parcelable Android 序列化接口 效率高 使用麻烦 在内存中读写（AS有相关插件 一键生成所需方法） ，对象不能保存到磁盘中"))
 
-        titleList.add(ListResult("静态属性和静态方法是否可以被继承？是否可以被重写？以及原因", content))
+        titleList.add(ListResult("静态属性和静态方法是否可以被继承？是否可以被重写？以及原因", "Serializable Java 序列化接口 在硬盘上读写 读写过程中有大量临时变量的生成，内部执行大量的i/o操作，效率很低。\n" +
+                "Parcelable Android 序列化接口 效率高 使用麻烦 在内存中读写（AS有相关插件 一键生成所需方法） ，对象不能保存到磁盘中"))
 
-        titleList.add(ListResult("成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用", content))
+        titleList.add(ListResult("成员内部类、静态内部类、局部内部类和匿名内部类的理解，以及项目中的应用", "ava中内部类主要分为成员内部类、局部内部类(嵌套在方法和作用域内)、匿名内部类（没构造方法）、静态内部类（static修饰的类，不能使用任何外围类的非static成员变量和方法， 不依赖外围类）\n" +
+                "使用内部类最吸引人的原因是：每个内部类都能独立地继承一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。\n" +
+                "因为Java不支持多继承，支持实现多个接口。但有时候会存在一些使用接口很难解决的问题，这个时候我们可以利用内部类提供的、可以继承多个具体的或者抽象的类的能力来解决这些程序设计问题。可以这样说，接口只是解决了部分问题，而内部类使得多重继承的解决方案变得更加完整。"))
 
         titleList.add(ListResult("string 转换成 integer的方式及原理", content))
 

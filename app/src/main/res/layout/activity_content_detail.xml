@@ -7,8 +7,9 @@
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
+        android:padding="10dp"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -25,10 +26,10 @@
             android:id="@+id/tvContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:layout_margin="10dp"
             android:autoLink="all"
             android:lineSpacingExtra="2dp"
-            android:layout_margin="10dp"
+            android:textColor="@color/black"
             android:textSize="17sp" />
     </ScrollView>
 </LinearLayout>
