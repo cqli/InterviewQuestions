@@ -231,8 +231,15 @@ class AndroidFragment : BaseFragment() {
         titleList.add(ListResult("Socket建立网络连接的步骤", content))
 
         titleList.add(ListResult("11、Tcp／IP三次握手，四次挥手", content))
+        val content_hunxiao = "这里说的的混淆其实是包括了代码压缩、" +
+                "代码混淆以及资源压缩等的优化过程。依靠 ProGuard，混淆流程将主" +
+                "项目以及依赖库中未被使用的类、类成员、方法、属性移除，这有助于规避64K方法数的瓶颈；" +
+                "同时，将类、类成员、方法重命名为无意义的简短名称，增加了逆向工程的难度。" +
+                "而依靠 Gradle 的 Android 插件，我们将移除未被使用的资源，可以有效减小 apk 安装包大小"
 
-        titleList.add(ListResult("Android关于打包混淆需要知道的知识点", content))
+
+
+        titleList.add(ListResult("<a href=\"https://www.jianshu.com/p/158aa484da13\">Android关于打包混淆需要知道的知识点</a>", content_hunxiao))
 //        adapter?.updata(titleList)
     }
 
